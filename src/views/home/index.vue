@@ -1,10 +1,12 @@
 <template>
-    <router-view></router-view>
+    <div class="">
+      i am the home vue
+    </div>
 </template>
 
 <script>
     export default {
-        name: "App"
+        name: "home"
     }
 </script>
 
