@@ -5,7 +5,7 @@ import user from './user' ;
 import login from './login' ;
 import getters from './getters' ;
 
-Vue.use( vuex ) ;
+Vue.use( Vuex ) ;
 
 export default new Vuex.Store( {
   modules: {

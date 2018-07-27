@@ -88,3 +88,36 @@
   </style>
 
   ```
+#### 5.到目前为止是成功创建了一个简单的vue项目
+
+#### 6.使用vuex进行状态管理
+* npm install vuex --save -dev 安装vuex的相关依赖等
+
+* 创建对应的store文件夹及相关目录文件作为vuex的配置文件
+
+* 在main.js中引入vuex所生成的实例对象 并将其通过store属性注册到vue实例的属性中
+
+#### 7.修改login.vue组件
+
+#### 8.在login.vue中调用全局的登录的方法
+
+#### 9.封装axios发送请求的公共组件实例
+
+* npm install axios --save -dev 安装axios的相关依赖等
+
+* 创建对应的request.js文件暴露axios实例对象 并对发送请求的参数 以及返回数据的处理进行公共部分的抽取
+
+#### 10.创建对应的api目录 并定义对应的请求函数
+
+#### 11.引入mockJs模块 用户模拟请求数据的真实环境
+
+* npm install mock --save -dev 安装mockjs的相关依赖等
+
+* 创建mock目录 引入mockjs核心模块 并创建相关请求的规则 书写匹配请求url的正则表达式
+
+* 在main.js中引入对应的mock的模块
+
+#### 12.模拟发送请求获取到对应的token值 以及当前的角色列表 并将其保存在缓存
+* 调用api文件夹下的对应请求函数获取到对应的数据( 模拟返回的token值 角色信息等 )
+
+* 将获取到的token值更新到全局的状态管理中 并将其保存在本地的缓存

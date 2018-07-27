@@ -24,6 +24,52 @@ const routes = [
     component: _import( 'home' )
   }
 ] ;
+
+//定义需要动态添加的路由列表
+export const activeRoutes = [
+  {
+    path: '/test_1',
+    component: _import( 'test_1' ),
+    meta: {
+      title: 'test_1',
+      roles: [ 'admin' ]
+    }
+  },
+  {
+    path: '/test_2',
+    component: _import( 'test_2' ),
+    meta: {
+      title: 'test_2',
+      roles: [ 'admin' ]
+    }
+  },
+  {
+    path: '/test_3',
+    component: _import( 'test_3' ),
+    meta: {
+      title: 'test_3',
+      roles: [ 'admin' ]
+    }
+  },
+  {
+    path: '/test_4',
+    component: _import( 'test_4' ),
+    meta: {
+      title: 'test_4',
+      roles: [ 'admin' ]
+    }
+  },
+  {
+    path: '/test_5',
+    component: _import( 'test_5' ),
+    meta: {
+      title: 'test_5',
+      roles: [ 'admin' ]
+    }
+  }
+] ;
+
+
 export default new Router( {
   routes
 } )

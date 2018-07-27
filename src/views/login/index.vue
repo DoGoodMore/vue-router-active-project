@@ -10,11 +10,12 @@
              id="password"
              v-model="form.password">
       <br>
-      <button>点击登录</button>
+      <button @click="loginByUsername( form )">点击登录</button>
     </div>
 </template>
 
 <script>
+    import { mapActions } from 'vuex' ;
     export default {
         name: "login",
       data() {
@@ -24,6 +25,9 @@
               password: ''
             }
           }
+      },
+      methods: {
+        ...mapActions( [ 'loginByUsername' ] )
       }
     }
 </script>
