@@ -12,5 +12,9 @@ export default {
   loginByUsername: config => {
     const { username } = JSON.parse( config.body ).data ;
     return userMap[ username ] ;
+  },
+  getUserInfoByToken: config => {
+    const { token } = JSON.parse( config.body ).data ;
+    return userMap[ token ] ;
   }
 }

@@ -7,3 +7,10 @@ export function loginByUsername(data) {
     data
   } )
 }
+export function getUserInfoByToken(data) {
+  return request( {
+    url: '/login/getUserInfoByToken',
+    method: 'post',
+    data
+  } )
+}

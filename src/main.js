@@ -8,6 +8,7 @@ import App from './App.vue' ;
 //引入vuex实例对象
 import store from './store' ;
 
+import './accessControl' ;
 //引入mockJS 模拟获取返回数据
 import './mock' ;
 

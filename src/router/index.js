@@ -13,7 +13,7 @@ Vue.use( Router ) ;
 const routes = [
   {
     path: '/',
-    redirect: '/login'
+    redirect: '/login',
   },
   {
     path: '/login',
@@ -22,6 +22,10 @@ const routes = [
   {
     path: '/home',
     component: _import( 'home' )
+  },
+  {
+    path: '/403',
+    component: _import( 'errorPage/403.vue' )
   }
 ] ;
 
@@ -32,7 +36,7 @@ export const activeRoutes = [
     component: _import( 'test_1' ),
     meta: {
       title: 'test_1',
-      roles: [ 'admin' ]
+      roles: [ '' ]
     }
   },
   {

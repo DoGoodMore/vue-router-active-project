@@ -1,5 +1,5 @@
 import { SET_ROUTES } from "../nameSpace" ;
-import { activeRoutes } from "../../router" ;
+import router, { activeRoutes } from "../../router" ;
 import { filterRoutes } from "../../util/auth" ;
 
 export default {
@@ -15,6 +15,7 @@ export default {
     addRoutes( { commit }, role ) {
       const routes = filterRoutes( activeRoutes, role ) ;
       commit( SET_ROUTES, routes ) ;
+      router.addRoutes( routes ) ;
     }
   }
 }
