@@ -12,31 +12,25 @@ router.beforeEach( ( to, from, next ) => {
         /*to.meta.roles.indexOf( store.getters.roles[ 0 ] ) !== -1 ?
           next() : next( '/403' ) ;*/
         if ( to.meta.roles.indexOf( store.getters.roles[ 0 ] ) !== -1 ) {
-          console.log( 111 ) ;
           next()
         } else {
-          console.log( '22222222' ) ;
+          //todo: 本段逻辑永远不会被执行
           next( '/403' )
         }
       } else {
         next() ;
       }
     } else {
-      //如果当前没有获取到对应的角色信息 发送token 获取到对应的角色信息
       store.dispatch( 'getUserInfoByToken', getToken() )
         .then( () => {
           if ( to.meta.roles && to.meta.roles.length ) {
-            /*to.meta.roles.indexOf( store.getters.roles[ 0 ] ) !== -1 ?
-              next() : next( '/403' )*/
             if ( to.meta.roles.indexOf( store.getters.roles[ 0 ] ) !== -1 ) {
-              console.log( 111 ) ;
               next()
             } else {
-              console.log( '22222222' ) ;
-              next( '/403' )
+              //todo: 同理 本段逻辑不会被正常值执行
+              next( '/404' )
             }
           } else {
-            console.log( 343333333 ) ;
             next( { ...to, replace: true } ) ;
           }
         } )
@@ -46,7 +40,7 @@ router.beforeEach( ( to, from, next ) => {
         } )
     }
   } else {
-    // if ( whiteList.indexOf( to.path ) !== -1 ) next() ;
-    if ( to.meta.roles === undefined ) next() ;
+    if ( whiteList.indexOf( to.path ) !== -1 ) next() ;
+    next( '/login' ) ;
   }
 } ) ;

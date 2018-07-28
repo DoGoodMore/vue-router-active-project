@@ -26,6 +26,14 @@ const routes = [
   {
     path: '/403',
     component: _import( 'errorPage/403.vue' )
+  },
+  {
+    path: '*',
+    component: _import( 'errorPage/404.vue' ),
+    meta: {
+      title: '404',
+      roles: []
+    }
   }
 ] ;
 
@@ -36,7 +44,7 @@ export const activeRoutes = [
     component: _import( 'test_1' ),
     meta: {
       title: 'test_1',
-      roles: [ '' ]
+      roles: [ 'admin111' ]
     }
   },
   {
